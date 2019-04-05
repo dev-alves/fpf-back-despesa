@@ -1,0 +1,2 @@
+INSERT INTO tipo_despesa (nome)
+VALUES ('ALIMENTAÇÃO'), ('CONTA DE ENERGIAR'), ('CONTA DE LUZ');
