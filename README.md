@@ -34,7 +34,7 @@ O SCD é um sistema de gerenciamento de despesas, que permite a inclusão, alter
   - [MacOSX](https://dev.mysql.com/doc/refman/5.7/en/osx-installation-pkg.html)
   
 ## Executando o projeto
-Navegue pelo terminal até a raiz do projeto, até chegar na pasta fpf. Em seguida, execute: 
+Navegue pelo terminal até a raiz do projeto, até chegar na pasta `fpf`. Em seguida, execute: 
 ```
 mvn spring-boot:run 
 ```
