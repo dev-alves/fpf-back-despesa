@@ -17,7 +17,13 @@ public class DespesaListener {
 		anexoStorage.moverParaPastaPrincipal(evento.getDespesa().getAnexo());
 	}
 	
-	@EventListener(condition = "#evento.temAnexo()")
+	@EventListener(condition = "#evento.anexoEditado()")
+	public void despesaEditada(DespesaEditadaEvent evento) {
+		anexoStorage.removerAnexoPrincipal(evento.getAnexoAntigo());
+		anexoStorage.moverParaPastaPrincipal(evento.getNovoAnexo());
+	}
+	
+	@EventListener(condition = "#evento.anexoDespesa()")
 	public void despesaDeletada(DespesaDeletadaEvent evento) {
 		anexoStorage.removerAnexoPrincipal(evento.getLocal());
 	}

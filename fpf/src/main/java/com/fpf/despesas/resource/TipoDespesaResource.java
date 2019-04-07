@@ -14,7 +14,7 @@ import com.fpf.despesas.repository.TipoDespesaRepository;
 
 @RestController
 @RequestMapping("tipos-despesa")
-@CrossOrigin
+@CrossOrigin("*")
 public class TipoDespesaResource {
 	
 	@Autowired

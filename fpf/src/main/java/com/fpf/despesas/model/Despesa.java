@@ -14,12 +14,13 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-import org.springframework.format.annotation.DateTimeFormat;
+import org.hibernate.annotations.DynamicUpdate;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 @Table(name = "despesa")
+@DynamicUpdate
 public class Despesa implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
@@ -33,14 +34,12 @@ public class Despesa implements Serializable {
 	
 	@NotNull(message = "O valor da despesa é obrigatório")
 	@Column(name = "VALOR")
+	@JsonFormat(shape=JsonFormat.Shape.STRING)
 	private BigDecimal valorDespesa;
 	
 	
 	@NotNull(message = "A data da despesa é obrigatório")
 	@Column(name = "DATA_DESPESA")
-	@DateTimeFormat(pattern="dd/MM/yyyy")
-	@JsonFormat
-    (shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
 	private LocalDate dataDespesa;
 	
 	@Column(name = "ANEXO")

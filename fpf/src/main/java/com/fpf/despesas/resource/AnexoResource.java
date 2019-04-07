@@ -17,7 +17,7 @@ import com.fpf.despesas.storage.AnexoStorageRunnable;
 
 @RestController
 @RequestMapping("/anexos")
-@CrossOrigin
+@CrossOrigin("*")
 public class AnexoResource {
 	
 	@Autowired
